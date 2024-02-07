@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./App.css";
+import {useLocalStorage} from "./useLocalStorage";
+
 
 function App() {
-  const [firstName, setFirstName] = useState();
-  const [lastName, setlastName] = useState();
-  const [hobbies, setHobbies] = useState();
+  const [firstName, setFirstName] = uselocalStorage("FIRST_NAME","");
+  const [lastName, setlastName] = useLocalStorage("LAST_NAME",()=>{
+    return "nothing"
+  });
+  const [hobbies, setHobbies] = useLocalStorage("HOBBIES",[
+    "Coding",
+    "growing and glowing",
+  ]);
 
   return (
     <>
@@ -25,7 +32,13 @@ function App() {
         />
       </div>
       <div>{hobbies.join(",")}</div>
-      <button onClick={()=>setHobbies(currentHobbies=>[...currentHobbies,"New Hobby"])}>Add Hobby</button>
+      <button
+        onClick={() =>
+          setHobbies((currentHobbies) => [...currentHobbies, "something new..."])
+        }
+      >
+        Add Hobby
+      </button>
     </>
   );
 }
