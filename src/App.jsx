@@ -24,7 +24,8 @@ function App() {
           onChange={(e) => setlastName(e.target.value)}
         />
       </div>
-      <button>Add</button>
+      <div>{hobbies.join(",")}</div>
+      <button onClick={()=>setHobbies(currentHobbies=>[...currentHobbies,"New Hobby"])}>Add Hobby</button>
     </>
   );
 }
