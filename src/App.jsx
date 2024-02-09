@@ -4,13 +4,13 @@ import {useLocalStorage} from "./useLocalStorage";
 
 
 function App() {
-  const [firstName, setFirstName] = uselocalStorage("FIRST_NAME","");
+  const [firstName, setFirstName] = useLocalStorage("FIRST_NAME","");
   const [lastName, setlastName] = useLocalStorage("LAST_NAME",()=>{
     return "nothing"
   });
   const [hobbies, setHobbies] = useLocalStorage("HOBBIES",[
     "Coding",
-    "growing and glowing",
+    "Learning",
   ]);
 
   return (
