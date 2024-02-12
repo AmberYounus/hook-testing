@@ -13,6 +13,9 @@ function App() {
     "Learning",
   ]);
 
+  const handleDelete =()=>{
+    localStorage.clear()
+  }
   return (
     <>
       <div >
@@ -34,9 +37,12 @@ function App() {
       <div>{hobbies.join(",")}</div>
       <button
         onClick={() =>
-          setHobbies((currentHobbies) => [...currentHobbies, "something new..."])
+          setHobbies((currentHobbies) => [...currentHobbies, ""])
         }>
-        Add Hobby
+        Add
+      </button>
+      <button onClick={()=> handleDelete()}>
+        Delete
       </button>
     </>
   );
