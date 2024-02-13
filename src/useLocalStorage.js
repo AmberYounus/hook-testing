@@ -17,6 +17,7 @@ export function useLocalStorage(key, initialValue) {
   });
 
   useEffect(() => {
+    //localstorge is clearred
     if (value === undefined) {
       localStorage.removeItem(key);
     } else {

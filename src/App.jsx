@@ -6,7 +6,7 @@ import {useLocalStorage} from "./useLocalStorage";
 function App() {
   const [firstName, setFirstName] = useLocalStorage("FIRST_NAME","");
   const [lastName, setLastName] = useLocalStorage("LAST_NAME",()=>{
-    return "nothing"
+    return ""
   });
   const [hobbies, setHobbies] = useLocalStorage("HOBBIES",[
     "Coding",
@@ -18,7 +18,7 @@ function App() {
   }
   return (
     <>
-      <div >
+      <div className="search-label ">
         <label id="firstName" htmlFor="">First Name</label>
         <input
           type="text"
@@ -39,7 +39,7 @@ function App() {
         onClick={() =>
           setHobbies((currentHobbies) => [...currentHobbies, ""])
         }>
-        Add
+        Add 
       </button>
       <button onClick={()=> handleDelete()}>
         Delete

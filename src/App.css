@@ -1,15 +1,14 @@
 * {
   margin-top: 50px;
-  font-family: 'Times New Roman', Times, serif;
-  border-radius: 50px;
+  font-family: "Times New Roman", Times, serif;
+  /* border-radius: 50px;
   background: #e0e0e0;
-  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #ffffff;
+  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #ffffff; */
   text-align: center;
   align-items: center;
   font-size: 20px;
- 
 }
-input{
+input {
   margin-left: 40px;
 }
 .firstName {
@@ -34,7 +33,7 @@ button {
   background: white;
   font-size: 1em;
   font-weight: 550;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 button:hover {
@@ -42,6 +41,6 @@ button:hover {
   color: white;
   font-size: 1.1em;
 }
-button{
+button {
   margin: 41px 17px;
 }
